@@ -36,7 +36,7 @@ class BaseEvent(AnystatModel):
 	event_type: EventType
 	user_id: int
 	received_at: int
-	duration: float
+	duration: int #ms
 
 class BaseMessageEvent(BaseEvent):
 	"""Base Pydantic data model for Telegram events associated with a specific message context."""

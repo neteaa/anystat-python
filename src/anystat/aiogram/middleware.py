@@ -34,7 +34,7 @@ class AnystatMiddleware(BaseMiddleware):
 		try:
 			return await handler(event, data)
 		finally:
-			duration = round(time.perf_counter() - start, 4)
+			duration = round(time.perf_counter() - start, 3) * 1000 #ms
 			
 			identified_user = self._identify(data) #Auto identify user
 			event_model = self._get_event_model(event, received_at, duration) 
