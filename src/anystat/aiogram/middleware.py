@@ -81,6 +81,9 @@ class AnystatMiddleware(BaseMiddleware):
 		
 		# Another command
 		elif text.startswith("/"):
+			if not self.anystat.track_command:
+				return None #Commands are disabled
+
 			command = text.split()[0]
 			return CommandEvent(
 				user_id=user_id,

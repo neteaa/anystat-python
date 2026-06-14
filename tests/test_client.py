@@ -33,3 +33,4 @@ def test_config():
 	assert anystat.debug == True
 	assert anystat.track_messages == True
 	assert anystat.auto_identify == True
+

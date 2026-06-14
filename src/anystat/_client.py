@@ -37,6 +37,10 @@ class Anystat:
 					Whether to automatically track the `/start` command.
 					Enabled by default.
 
+			track_command (bool):
+					Whether to automatically track commands.
+					Enabled by default.
+
 			track_callback_query (bool):
 					Whether to automatically track clicks on inline keyboard buttons
 					(callback queries). Enabled by default.
@@ -60,6 +64,7 @@ class Anystat:
 		track_start: bool = None,
 		track_callback_query: bool = None,
 		track_messages: bool = None,
+		track_command: bool = None,
 		auto_identify: bool = None
 	) -> None:
 		
@@ -76,6 +81,7 @@ class Anystat:
 
 		self.debug = debug if debug is not None else base_config.debug
 		self.track_start = track_start if track_start is not None else base_config.track_start
+		self.track_command = track_command if track_command is not None else base_config.track_command
 		self.track_callback_query = track_callback_query if track_callback_query is not None else base_config.track_callback_query
 		self.track_messages = track_messages if track_messages is not None else base_config.track_messages
 		self.auto_identify = auto_identify if auto_identify is not None else base_config.auto_identify

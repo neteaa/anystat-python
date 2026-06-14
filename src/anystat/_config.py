@@ -21,6 +21,10 @@ class AnystatConfig:
 					Whether to automatically track the `/start` command.
 					Enabled by default.
 
+			track_command (bool):
+					Whether to automatically track commands.
+					Enabled by default.
+
 			track_callback_query (bool):
 					Whether to automatically track clicks on inline keyboard buttons
 					(callback queries). Enabled by default.
@@ -35,7 +39,7 @@ class AnystatConfig:
 	"""
 	debug: bool = False
 	track_start: bool = True
+	track_command: bool = True
 	track_callback_query: bool = True
 	track_messages: bool = False
 	auto_identify: bool = False
-	
