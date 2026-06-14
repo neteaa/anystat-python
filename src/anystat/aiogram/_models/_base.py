@@ -7,5 +7,6 @@ class AnystatModel(BaseModel):
 
 	model_config = ConfigDict(
 		extra="allow",
-		populate_by_name=True #Для алиасов, например user_id -> userId
+		populate_by_name=True, #Для алиасов, например user_id -> userId
+		alias_generator=True #Автогенерация алиасов
 	)
